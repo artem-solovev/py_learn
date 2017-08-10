@@ -11,4 +11,4 @@ for i in range( user_input ):
     symbols += "#"
     spaces = spaces[:-1]
 
-    print( spaces + symbols + "\n" )
+    print( spaces + symbols )
