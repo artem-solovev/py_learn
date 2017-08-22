@@ -1,5 +1,7 @@
 import random
 
+DEFAULT_VALUE = 5
+
 print( "__WELCOME TO VOGON POETRY__" )
 print( "___________________________" )
 
@@ -22,7 +24,13 @@ adverbs = ['quickly', 'cheerfully', 'painfully',
 
 strSequence = [ articles, nouns, adverbs, verbs ]
 
-userChoise = int( input( "Enter the number: " ) )
+try:
+    userChoise = int( input( "Enter the number: " ) )
+except ValueError as err:
+    print( "\t___________________" )
+    print( "Value by default is ", DEFAULT_VALUE )
+    print( "\t___________________" )
+    userChoise = DEFAULT_VALUE
 
 
 for i in range( 0, userChoise ):
